@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%; /*pra ocupar 100% da largura do nosso documento*/
+  min-height: 100vh; /*pra ocupar 100% da visao do usuario na tela*/ /**/
+  background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  display: flex;
+  justify-content: center; /*alinha na largura*/
+  align-items: center; /*alinha na altura*/
+}
+
+.container {
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 400px; /*largura do container*/
+  max-width: 100%; /*para ocupar todo o espaco do container*/
+  overflow: hidden; /*para sobrepor o header e ficar as bordas arredondadas*/
+}
+
+.header {
+  background-color: #eee;
+  padding: 20px;
+}
+
+.form {
+  padding: 20px;
+}
+
+/*form control e a div que guarda a label,input e icones */
+.form-control {
+  margin-bottom: 10px; /*pra dar um espacamento*/
+  padding: 20px; /*pra ter espaco para a msg de erro*/
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0; /*dorda dos inputs*/
+  display: block; /*para deixar um elemento por linha*/
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%; /*pra ocupar 100% da largura da div form control*/
+  padding: 10px; /*aumenta o espaco interno do input*/
+}
+
+.form-control i {
+  position: absolute; /*joga um em cima do outro*/
+  top: 65px;
+  right: 30px;
+  visibility: hidden;
+}
+
+.form-control small {
+  position: absolute;
+  bottom: 0;
+
+  visibility: hidden;
+}
+
+.form button {
+  background-color: #b490ca;
+  border: 2px solid #b490ca;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* tratando o erro e sucesso */
+
+/* vai pegar todas as classes que estiverem com sucesso */
+.form-control.success input {
+  border-color: #5ee7b3;
+}
+
+.form-control.error input {
+  border-color: #c4441e;
+}
+
+.form-control.success i.fa-check-circle {
+  color: #5ee7b3;
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: #c4441e;
+  visibility: visible;
+}
+
+.form-control.error small {
+  color: #c4441e;
+  visibility: visible;
+}
